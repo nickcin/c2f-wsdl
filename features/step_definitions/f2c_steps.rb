@@ -1,10 +1,10 @@
 require "savon"
 
-Given /^I want a new wsdl client$/ do
-  @client = Savon::Client.new do
-    wsdl.document = "http://www.w3schools.com/webservices/tempconvert.asmx?wsdl"
-  end
-end
+#Given /^I want a new wsdl client$/ do
+#  @client = Savon::Client.new do
+#    wsdl.document = "http://www.w3schools.com/webservices/tempconvert.asmx?wsdl"
+#  end
+#end
 
 When /^the user sends a fahrenheit request of (\d+)$/ do |f|
   @response = @client.request :tem, :fahrenheit_to_celsius, body: { "Fahrenheit" => f }
